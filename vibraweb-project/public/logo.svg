@@ -1,0 +1,13 @@
+<svg width="120" height="40" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- Logo Text -->
+  <text x="45" y="26" font-family="Arial, sans-serif" font-weight="bold" font-size="20" fill="#000000">Vibra</text>
+  <text x="95" y="26" font-family="Arial, sans-serif" font-weight="bold" font-size="20" fill="#333333">Web</text>
+  
+  <!-- Logo Icon -->
+  <g>
+    <!-- Vibration Waves -->
+    <path d="M5 20 Q 10 10, 15 20 T 25 20" stroke="#000000" stroke-width="2.5" fill="none"/>
+    <path d="M5 25 Q 12.5 10, 20 25 T 35 25" stroke="#333333" stroke-width="2" fill="none"/>
+    <path d="M5 30 Q 15 10, 25 30 T 40 30" stroke="#666666" stroke-width="1.5" fill="none"/>
+  </g>
+</svg> 

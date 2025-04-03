@@ -1,0 +1,38 @@
+<svg width="480" height="360" viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="480" height="360" fill="#F5F5F5" rx="12" ry="12"/>
+
+  <!-- Decorative Elements -->
+  <circle cx="80" cy="80" r="40" fill="#000000" fill-opacity="0.1"/>
+  <circle cx="400" cy="280" r="50" fill="#333333" fill-opacity="0.1"/>
+  <circle cx="240" cy="120" r="30" fill="#666666" fill-opacity="0.1"/>
+
+  <!-- Team Illustration -->
+  
+  <!-- Person 1 (Left) -->
+  <circle cx="130" cy="200" r="30" fill="#111111"/> <!-- Head -->
+  <rect x="115" y="230" width="30" height="60" rx="5" ry="5" fill="#333333"/> <!-- Body -->
+  <rect x="100" y="240" width="15" height="40" rx="5" ry="5" fill="#333333"/> <!-- Left Arm -->
+  <rect x="145" y="240" width="15" height="40" rx="5" ry="5" fill="#333333"/> <!-- Right Arm -->
+  
+  <!-- Person 2 (Middle) -->
+  <circle cx="240" cy="180" r="30" fill="#111111"/> <!-- Head -->
+  <rect x="225" y="210" width="30" height="60" rx="5" ry="5" fill="#000000"/> <!-- Body -->
+  <rect x="210" y="220" width="15" height="40" rx="5" ry="5" fill="#000000"/> <!-- Left Arm -->
+  <rect x="255" y="220" width="15" height="40" rx="5" ry="5" fill="#000000"/> <!-- Right Arm -->
+  
+  <!-- Person 3 (Right) -->
+  <circle cx="350" cy="200" r="30" fill="#111111"/> <!-- Head -->
+  <rect x="335" y="230" width="30" height="60" rx="5" ry="5" fill="#333333"/> <!-- Body -->
+  <rect x="320" y="240" width="15" height="40" rx="5" ry="5" fill="#333333"/> <!-- Left Arm -->
+  <rect x="365" y="240" width="15" height="40" rx="5" ry="5" fill="#333333"/> <!-- Right Arm -->
+  
+  <!-- Connection Lines -->
+  <line x1="160" y1="245" x2="210" y2="245" stroke="#000000" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="270" y1="245" x2="320" y2="245" stroke="#000000" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Labels -->
+  <rect x="105" y="300" width="50" height="20" rx="4" ry="4" fill="#000000"/>
+  <rect x="215" y="300" width="50" height="20" rx="4" ry="4" fill="#000000"/>
+  <rect x="325" y="300" width="50" height="20" rx="4" ry="4" fill="#000000"/>
+</svg> 
