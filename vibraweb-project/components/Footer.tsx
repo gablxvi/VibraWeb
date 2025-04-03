@@ -12,10 +12,18 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-heading mb-4">VibraWeb</h3>
-            <p className="text-gray-300 mb-4">
-              Desenvolvimento de soluções SaaS e criação de websites personalizados para empresas de todos os tamanhos.
-            </p>
-            <div className="flex space-x-4">
+            <div className="space-y-3">
+              <p className="text-gray-400 text-sm">CNPJ: 60.236.993/0001-27</p>
+              <p className="text-gray-400">
+                Desenvolvimento de soluções web personalizadas para impulsionar seu negócio.
+              </p>
+              <p className="text-gray-400 text-sm">
+                Atendimento de Segunda a Sexta
+                <br />
+                Das 9h às 18h
+              </p>
+            </div>
+            <div className="flex space-x-4 mt-4">
               <a 
                 href="https://www.instagram.com/vibraweb/" 
                 target="_blank" 
@@ -114,10 +122,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <div className="flex justify-between items-center">
-            <p>&copy; {currentYear} VibraWeb. Todos os direitos reservados.</p>
-            <p>CNPJ: 60.236.993/0001-27</p>
-          </div>
+          <p>&copy; {currentYear} VibraWeb. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
