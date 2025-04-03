@@ -44,13 +44,6 @@ npm run dev
 
 3. Acesse o site em [http://localhost:3000](http://localhost:3000)
 
-## Página Administrativa (Planejada)
-
-Uma área administrativa está planejada para ser acessível apenas em rede local, com as seguintes funcionalidades:
-
-- Adicionar, editar e remover serviços
-- Gerenciar informações sobre a empresa
-- Acesso restrito a dispositivos autorizados na rede local
 
 ## Contato
 
