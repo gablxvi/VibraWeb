@@ -114,7 +114,10 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {currentYear} VibraWeb. Todos os direitos reservados.</p>
+          <div className="flex justify-between items-center">
+            <p>&copy; {currentYear} VibraWeb. Todos os direitos reservados.</p>
+            <p>CNPJ: 60.236.993/0001-27</p>
+          </div>
         </div>
       </div>
     </footer>
