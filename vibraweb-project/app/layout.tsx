@@ -4,6 +4,9 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'VibraWeb - Desenvolvimento de SaaS e Websites',
   description: 'Especialistas em desenvolvimento de soluções SaaS e criação de websites personalizados.',
+  icons: {
+    icon: '/logo.svg'
+  }
 }
 
 export default function RootLayout({
