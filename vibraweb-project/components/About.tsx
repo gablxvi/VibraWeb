@@ -2,8 +2,11 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const About = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="sobre" className="section bg-white">
       <div className="container">
@@ -23,29 +26,25 @@ const About = () => {
           </div>
           
           <div>
-            <h2 className="mb-6">Quem Somos</h2>
+            <h2 className="mb-6">{t('about.title')}</h2>
             <div className="relative mb-8 pl-6 border-l-4 border-primary">
               <p className="text-lg italic text-gray-600">
-                "A VibraWeb nasceu para fornecer soluções tecnológicas sob medida. Nossa equipe é composta por profissionais experientes, comprometidos com inovação e qualidade. Acreditamos que a tecnologia pode facilitar processos e ajudar empresas a crescerem no ambiente digital."
+                {t('about.mission')}
               </p>
             </div>
             
             <p className="text-gray-600 mb-4">
-              A VibraWeb é especializada no desenvolvimento de soluções SaaS e criação de websites personalizados. Focamos em produtos escaláveis e eficientes para empresas de todos os tamanhos.
-            </p>
-            
-            <p className="text-gray-600 mb-6">
-              Nosso objetivo é transformar ideias em soluções digitais inovadoras, sempre aliando tecnologia de ponta com as melhores práticas de desenvolvimento.
+              {t('about.description')}
             </p>
             
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-light p-4 rounded-lg border border-gray-100">
                 <div className="font-bold text-3xl text-primary mb-2">5+</div>
-                <div className="text-sm text-gray-600">Anos de experiência</div>
+                <div className="text-sm text-gray-600">{t('about.experience')}</div>
               </div>
               <div className="bg-light p-4 rounded-lg border border-gray-100">
                 <div className="font-bold text-3xl text-primary mb-2">50+</div>
-                <div className="text-sm text-gray-600">Projetos entregues</div>
+                <div className="text-sm text-gray-600">{t('about.projects')}</div>
               </div>
             </div>
           </div>

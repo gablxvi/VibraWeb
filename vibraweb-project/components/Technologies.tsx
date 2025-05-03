@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface TechCardProps {
   title: string;
@@ -19,13 +20,15 @@ const TechCard = ({ title, description, icon }: TechCardProps) => (
 );
 
 const Technologies = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="tecnologias" className="section bg-light">
       <div className="container">
         <div className="text-center mb-12">
-          <h2 className="mb-4">Tecnologias Utilizadas</h2>
+          <h2 className="mb-4">{t('technologies.title')}</h2>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            Utilizamos as tecnologias mais modernas e eficientes do mercado para desenvolver nossas soluções.
+            {t('technologies.subtitle')}
           </p>
         </div>
         

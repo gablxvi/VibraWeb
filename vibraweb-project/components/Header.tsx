@@ -2,9 +2,12 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { useLanguage } from '@/contexts/LanguageContext';
+import LanguageSelector from './LanguageSelector';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
@@ -45,19 +48,20 @@ const Header = () => {
         </button>
 
         {/* Desktop navigation */}
-        <nav className="hidden md:flex gap-8">
+        <nav className="hidden md:flex gap-8 items-center">
           <Link href="/#servicos" className="text-secondary hover:text-primary transition-colors">
-            Serviços
+            {t('header.services')}
           </Link>
           <Link href="/#sobre" className="text-secondary hover:text-primary transition-colors">
-            Quem Somos
+            {t('header.about')}
           </Link>
           <Link href="/#tecnologias" className="text-secondary hover:text-primary transition-colors">
-            Tecnologias
+            {t('header.technologies')}
           </Link>
           <Link href="/#contato" className="text-secondary hover:text-primary transition-colors">
-            Contato
+            {t('header.contact')}
           </Link>
+          <LanguageSelector className="text-secondary hover:text-primary transition-colors" />
         </nav>
 
         {/* Mobile navigation */}
@@ -72,29 +76,30 @@ const Header = () => {
               className="text-secondary hover:text-primary transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              Serviços
+              {t('header.services')}
             </Link>
             <Link 
               href="/#sobre" 
               className="text-secondary hover:text-primary transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              Quem Somos
+              {t('header.about')}
             </Link>
             <Link 
               href="/#tecnologias" 
               className="text-secondary hover:text-primary transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              Tecnologias
+              {t('header.technologies')}
             </Link>
             <Link 
               href="/#contato" 
               className="text-secondary hover:text-primary transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              Contato
+              {t('header.contact')}
             </Link>
+            <LanguageSelector className="text-secondary hover:text-primary transition-colors" />
           </div>
         </div>
       </div>

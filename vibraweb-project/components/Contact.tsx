@@ -3,8 +3,10 @@
 import React, { useState, useRef } from 'react';
 // @ts-ignore
 import emailjs from '@emailjs/browser';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Contact = () => {
+  const { t } = useLanguage();
   const formRef = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
     name: '',
@@ -80,16 +82,16 @@ const Contact = () => {
     <section id="contato" className="section bg-white">
       <div className="container">
         <div className="text-center mb-12">
-          <h2 className="mb-4">Entre em Contato</h2>
+          <h2 className="mb-4">{t('contact.title')}</h2>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            Tem alguma dúvida ou deseja solicitar um orçamento? Entre em contato conosco.
+            {t('contact.subtitle')}
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           <div className="md:col-span-2 space-y-8">
             <div>
-              <h3 className="text-xl font-bold mb-4">Informações de Contato</h3>
+              <h3 className="text-xl font-bold mb-4">{t('contact.title')}</h3>
               <p className="text-gray-600 mb-6">
                 Estamos disponíveis para ajudar com suas dúvidas e necessidades. Entre em contato por e-mail ou pelo WhatsApp.
               </p>
@@ -147,22 +149,22 @@ const Contact = () => {
           </div>
           
           <div className="md:col-span-3 bg-light p-8 rounded-lg">
-            <h3 className="text-xl font-bold mb-6">Envie uma Mensagem</h3>
+            <h3 className="text-xl font-bold mb-6">{t('contact.send')}</h3>
             
             {submitSuccess ? (
               <div className="bg-secondary/10 border border-secondary text-secondary p-4 rounded mb-6">
-                Sua mensagem foi enviada com sucesso! Entraremos em contato em breve.
+                {t('contact.success')}
               </div>
             ) : submitError ? (
               <div className="bg-red-100 border border-red-400 text-red-700 p-4 rounded mb-6">
-                Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente.
+                {t('contact.error')}
               </div>
             ) : null}
             
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="name" className="block text-gray-700 mb-2">Nome</label>
+                  <label htmlFor="name" className="block text-gray-700 mb-2">{t('contact.name')}</label>
                   <input 
                     type="text" 
                     id="name" 
@@ -174,7 +176,7 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-gray-700 mb-2">Email</label>
+                  <label htmlFor="email" className="block text-gray-700 mb-2">{t('contact.email')}</label>
                   <input 
                     type="email" 
                     id="email" 
@@ -188,7 +190,7 @@ const Contact = () => {
               </div>
               
               <div>
-                <label htmlFor="subject" className="block text-gray-700 mb-2">Assunto</label>
+                <label htmlFor="subject" className="block text-gray-700 mb-2">{t('contact.subject')}</label>
                 <select 
                   id="subject" 
                   name="subject" 
@@ -206,7 +208,7 @@ const Contact = () => {
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-gray-700 mb-2">Mensagem</label>
+                <label htmlFor="message" className="block text-gray-700 mb-2">{t('contact.message')}</label>
                 <textarea 
                   id="message" 
                   name="message" 
@@ -231,7 +233,7 @@ const Contact = () => {
                     </svg>
                     Enviando...
                   </>
-                ) : "Enviar Mensagem"}
+                ) : t('contact.send')}
               </button>
             </form>
           </div>

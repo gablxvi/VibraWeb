@@ -2,9 +2,11 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { t } = useLanguage();
 
   return (
     <footer className="bg-dark text-white py-12">
@@ -58,33 +60,33 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-xl font-heading mb-4">Links Rápidos</h3>
+            <h3 className="text-xl font-heading mb-4">{t('footer.services')}</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/#servicos" className="text-gray-400 hover:text-white transition-colors">
-                  Serviços
+                  {t('header.services')}
                 </Link>
               </li>
               <li>
                 <Link href="/#sobre" className="text-gray-400 hover:text-white transition-colors">
-                  Quem Somos
+                  {t('header.about')}
                 </Link>
               </li>
               <li>
                 <Link href="/#tecnologias" className="text-gray-400 hover:text-white transition-colors">
-                  Tecnologias
+                  {t('header.technologies')}
                 </Link>
               </li>
               <li>
                 <Link href="/#contato" className="text-gray-400 hover:text-white transition-colors">
-                  Contato
+                  {t('header.contact')}
                 </Link>
               </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-xl font-heading mb-4">Contato</h3>
+            <h3 className="text-xl font-heading mb-4">{t('footer.contact')}</h3>
             <ul className="space-y-2">
               <li className="flex items-center text-gray-300">
                 <svg 
@@ -122,7 +124,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {currentYear} VibraWeb. Todos os direitos reservados.</p>
+          <p>&copy; {currentYear} VibraWeb. {t('footer.rights')}</p>
         </div>
       </div>
     </footer>

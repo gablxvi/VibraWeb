@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface ServiceCardProps {
   title: string;
@@ -17,20 +18,22 @@ const ServiceCard = ({ title, description, icon }: ServiceCardProps) => (
 );
 
 const Services = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="servicos" className="section bg-light">
       <div className="container">
         <div className="text-center mb-12">
-          <h2 className="mb-4">Nossos Serviços</h2>
+          <h2 className="mb-4">{t('services.title')}</h2>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            Oferecemos soluções tecnológicas completas para atender às necessidades do seu negócio.
+            {t('services.subtitle')}
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <ServiceCard 
-            title="SaaS Personalizado" 
-            description="Soluções de software como serviço escaláveis e seguras, projetadas para suas necessidades específicas."
+            title={t('services.saas.title')} 
+            description={t('services.saas.description')}
             icon={
               <svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" strokeWidth="2">
                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
@@ -41,8 +44,8 @@ const Services = () => {
           />
           
           <ServiceCard 
-            title="Sites Institucionais" 
-            description="Sites modernos e responsivos que representam a identidade da sua marca e convertem visitantes em clientes."
+            title={t('services.webDev.title')} 
+            description={t('services.webDev.description')}
             icon={
               <svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M12 2H2v10h10V2z"></path>
@@ -54,8 +57,8 @@ const Services = () => {
           />
           
           <ServiceCard 
-            title="Landing Pages" 
-            description="Páginas de conversão otimizadas para transformar visitantes em leads qualificados para seu negócio."
+            title={t('services.webApp.title')} 
+            description={t('services.webApp.description')}
             icon={
               <svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2z"></path>
@@ -67,8 +70,8 @@ const Services = () => {
           />
           
           <ServiceCard 
-            title="Consultoria em Integrações" 
-            description="Integração com CRMs, sistemas de pagamento e outras ferramentas para automatizar seus processos."
+            title={t('services.apiDev.title')} 
+            description={t('services.apiDev.description')}
             icon={
               <svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M16 16l4-4-4-4"></path>

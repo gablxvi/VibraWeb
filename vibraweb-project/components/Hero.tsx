@@ -3,25 +3,28 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Hero = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="relative bg-gradient-to-r from-dark to-primary text-white py-20 md:py-28">
       <div className="container mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="font-bold mb-4">
-              Desenvolvimento de SaaS e Websites
+              {t('hero.title')}
             </h1>
             <p className="text-lg md:text-xl mb-8 text-gray-200">
-              Transformamos ideias em soluções digitais inovadoras. Criamos produtos escaláveis e eficientes para empresas de todos os tamanhos.
+              {t('hero.description')}
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/#servicos" className="btn bg-white text-dark hover:bg-gray-200">
-                Nossos Serviços
+                {t('hero.services')}
               </Link>
               <Link href="/#contato" className="btn border-2 border-white text-white hover:bg-white hover:text-dark">
-                Fale Conosco
+                {t('hero.contact')}
               </Link>
             </div>
           </div>
