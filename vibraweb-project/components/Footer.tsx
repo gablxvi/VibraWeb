@@ -17,12 +17,10 @@ const Footer = () => {
             <div className="space-y-3">
               <p className="text-gray-400 text-sm">CNPJ: 60.236.993/0001-27</p>
               <p className="text-gray-400">
-                Desenvolvimento de soluções web personalizadas para impulsionar seu negócio.
+                {t('footer.description')}
               </p>
-              <p className="text-gray-400 text-sm">
-                Atendimento de Segunda a Sexta
-                <br />
-                Das 9h às 18h
+              <p className="text-gray-400 text-sm" style={{whiteSpace: 'pre-line'}}>
+                {t('footer.hours')}
               </p>
             </div>
             <div className="flex space-x-4 mt-4">
@@ -100,7 +98,7 @@ const Footer = () => {
                   <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path>
                 </svg>
                 <a href="https://wa.me/+5511952733381" className="hover:text-white transition-colors">
-                  WhatsApp para financeiro
+                  {t('footer.whatsapp')}
                 </a>
               </li>
               <li className="flex items-center text-gray-300">

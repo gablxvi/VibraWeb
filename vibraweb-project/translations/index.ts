@@ -68,7 +68,10 @@ const translations: Translations = {
       success: 'Mensagem enviada com sucesso!',
       error: 'Ocorreu um erro. Tente novamente.',
       required: 'Campo obrigatório',
-      invalidEmail: 'Email inválido'
+      invalidEmail: 'Email inválido',
+      help: 'Estamos disponíveis para ajudar com suas dúvidas e necessidades. Entre em contato por e-mail ou pelo WhatsApp.',
+      whatsapp: 'WhatsApp (Financeiro)',
+      whatsappCta: 'Clique aqui para iniciar uma conversa'
     },
     footer: {
       rights: 'Todos os direitos reservados',
@@ -76,7 +79,36 @@ const translations: Translations = {
       about: 'Sobre',
       contact: 'Contato',
       privacy: 'Política de Privacidade',
-      terms: 'Termos de Uso'
+      terms: 'Termos de Uso',
+      description: 'Desenvolvimento de soluções web personalizadas para impulsionar seu negócio.',
+      hours: 'Atendimento de Segunda a Sexta\nDas 9h às 18h',
+      whatsapp: 'WhatsApp para financeiro'
+    },
+    technologiesList: {
+      react: {
+        title: 'React & Next.js',
+        description: 'Desenvolvimento de interfaces modernas e responsivas com a melhor performance e experiência do usuário.'
+      },
+      tailwind: {
+        title: 'Tailwind CSS',
+        description: 'Estilização avançada e responsiva, permitindo o desenvolvimento rápido de interfaces modernas.'
+      },
+      node: {
+        title: 'Node.js & Express',
+        description: 'Backend robusto e escalável para desenvolvimento de APIs e serviços web.'
+      },
+      postgres: {
+        title: 'PostgreSQL',
+        description: 'Banco de dados relacional robusto para armazenamento seguro e eficiente de dados.'
+      },
+      firebase: {
+        title: 'Firebase',
+        description: 'Plataforma de desenvolvimento móvel e web que permite autenticação, armazenamento e notificações push.'
+      },
+      stripe: {
+        title: 'Stripe API',
+        description: 'Integração com sistema de pagamentos para processamento seguro de transações online.'
+      }
     }
   },
   'en': {
@@ -139,7 +171,10 @@ const translations: Translations = {
       success: 'Message sent successfully!',
       error: 'An error occurred. Please try again.',
       required: 'Required field',
-      invalidEmail: 'Invalid email'
+      invalidEmail: 'Invalid email',
+      help: 'We are available to help with your questions and needs. Contact us by email or WhatsApp.',
+      whatsapp: 'WhatsApp (Finance)',
+      whatsappCta: 'Click here to start a conversation'
     },
     footer: {
       rights: 'All rights reserved',
@@ -147,7 +182,36 @@ const translations: Translations = {
       about: 'About',
       contact: 'Contact',
       privacy: 'Privacy Policy',
-      terms: 'Terms of Use'
+      terms: 'Terms of Use',
+      description: 'Development of custom web solutions to boost your business.',
+      hours: 'Service from Monday to Friday\nFrom 9am to 6pm',
+      whatsapp: 'WhatsApp for finance'
+    },
+    technologiesList: {
+      react: {
+        title: 'React & Next.js',
+        description: 'Development of modern and responsive interfaces with the best performance and user experience.'
+      },
+      tailwind: {
+        title: 'Tailwind CSS',
+        description: 'Advanced and responsive styling, enabling fast development of modern interfaces.'
+      },
+      node: {
+        title: 'Node.js & Express',
+        description: 'Robust and scalable backend for API and web service development.'
+      },
+      postgres: {
+        title: 'PostgreSQL',
+        description: 'Robust relational database for secure and efficient data storage.'
+      },
+      firebase: {
+        title: 'Firebase',
+        description: 'Mobile and web development platform enabling authentication, storage, and push notifications.'
+      },
+      stripe: {
+        title: 'Stripe API',
+        description: 'Integration with payment systems for secure online transaction processing.'
+      }
     }
   }
 };

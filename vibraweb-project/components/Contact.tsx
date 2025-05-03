@@ -93,7 +93,7 @@ const Contact = () => {
             <div>
               <h3 className="text-xl font-bold mb-4">{t('contact.title')}</h3>
               <p className="text-gray-600 mb-6">
-                Estamos disponíveis para ajudar com suas dúvidas e necessidades. Entre em contato por e-mail ou pelo WhatsApp.
+                {t('contact.help')}
               </p>
             </div>
             
@@ -134,14 +134,14 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-bold mb-1">WhatsApp (Financeiro)</h4>
+                  <h4 className="font-bold mb-1">{t('contact.whatsapp')}</h4>
                   <a 
                     href="https://wa.me/+5511952733381" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-primary hover:text-secondary transition-colors"
                   >
-                    Clique aqui para iniciar uma conversa
+                    {t('contact.whatsappCta')}
                   </a>
                 </div>
               </div>
