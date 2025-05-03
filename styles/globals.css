@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #0070f3;
+  --secondary: #ff0080;
+  --accent: #7928ca;
+  --dark: #111827;
+  --light: #f9fafb;
+}
+
+/* Estilos gerais para o layout */
+body {
+  @apply bg-white text-gray-900 antialiased;
+}
+
+.container {
+  @apply max-w-6xl mx-auto px-4;
+}
+
+h1 {
+  @apply text-4xl md:text-5xl lg:text-6xl font-bold;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl font-bold;
+}
+
+h3 {
+  @apply text-2xl font-bold;
+}
+
+.section {
+  @apply py-16 md:py-20;
+}
+
+/* Estilos para os botões */
+.btn {
+  @apply px-6 py-3 font-medium rounded transition-colors duration-300 inline-flex items-center justify-center;
+}
+
+.btn-primary {
+  @apply bg-primary text-white hover:bg-primary/90 transition-colors;
+}
+
+/* Estilos para animações */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { 
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotateY {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(180deg); }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+/* Suporte para navegadores diferentes */
+.flag-container {
+  perspective: 1000px;
+}
+
+.flag-container .flag {
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-light text-dark;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-2 rounded-lg font-medium transition-all duration-300;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-secondary text-white hover:bg-secondary/90;
+  }
+  
+  .btn-outline {
+    @apply btn border-2 border-primary text-primary hover:bg-primary hover:text-white;
+  }
+  
+  .container {
+    @apply max-w-7xl mx-auto px-4;
+  }
+  
+  .section {
+    @apply py-16 md:py-24;
+  }
+} 
