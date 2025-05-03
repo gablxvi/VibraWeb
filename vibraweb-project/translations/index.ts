@@ -1,4 +1,4 @@
-interface TranslationObject {
+export interface TranslationObject {
   [key: string]: string | TranslationObject;
 }
 
@@ -87,7 +87,7 @@ const translations: Translations = {
       contact: 'Contact'
     },
     hero: {
-      title: 'SaaS & Website Development',
+      title: 'SaaS and Website Development',
       description: 'We transform ideas into innovative digital solutions. We create scalable and efficient products for businesses of all sizes.',
       services: 'Our Services',
       contact: 'Contact Us'
@@ -101,7 +101,7 @@ const translations: Translations = {
       },
       webDev: {
         title: 'Custom Websites',
-        description: 'We develop modern, responsive and SEO optimized websites that highlight your brand.'
+        description: 'We develop modern, responsive, and SEO-optimized websites that highlight your brand.'
       },
       webApp: {
         title: 'Web Applications',
@@ -114,7 +114,7 @@ const translations: Translations = {
     },
     about: {
       title: 'About Us',
-      description: 'VibraWeb is a company specialized in developing digital solutions. Our team is made up of professionals passionate about technology and innovation, committed to delivering high-quality products.',
+      description: 'VibraWeb is a company specialized in digital solution development. Our team consists of professionals passionate about technology and innovation, committed to delivering high-quality products.',
       mission: 'Our mission is to transform ideas into digital solutions that drive our clients success.',
       experience: 'Years of Experience',
       clients: 'Satisfied Clients',

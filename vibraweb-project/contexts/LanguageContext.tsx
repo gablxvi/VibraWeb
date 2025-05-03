@@ -1,4 +1,5 @@
 import React, { createContext, useState, useContext, ReactNode } from 'react';
+import { TranslationObject } from '@/translations';
 
 type Language = 'pt-BR' | 'en';
 
@@ -19,11 +20,11 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   // Função para obter a tradução com base na chave
   const t = (key: string): string => {
     const keys = key.split('.');
-    let value = translations[language];
+    let value: string | TranslationObject = translations[language];
     
     for (const k of keys) {
       if (value && typeof value === 'object' && k in value) {
-        value = value[k];
+        value = (value as TranslationObject)[k];
       } else {
         console.warn(`Translation key not found: ${key}`);
         return key;
